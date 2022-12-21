@@ -1,6 +1,7 @@
 onCreate:
   - sudo apt-get update -y
   - sudo corepack enable
+  - sudo npm install -g @angular/cli
   - yarn
 onStart:
   - |
