@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: "registration", component: RegistrationComponent },
   { path: "login", component: LoginComponent },
   { path: "jobs-list", component: JobsListComponent },
-  { path: "jobs-details", component: JobsDetailsComponent },
+  { path: "jobs-details/:id", component: JobsDetailsComponent },
   { path: "post-job", component: PostJobComponent },
   { path: "profile", component: ProfileComponent }
 
