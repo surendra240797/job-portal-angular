@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { compileNgModule } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-post-job',
@@ -8,30 +9,37 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post-job.component.scss'],
 })
 export class PostJobComponent implements OnInit {
-  constructor(private http: HttpClient) {}
+  // handlejobDetails() {
+  // throw new Error('Method not implemented.');
+  // }
 
-  postjob: any = {};
+  constructor(private http: HttpClient, private route: ActivatedRoute) {}
+
+  jobDetails: any = {};
+  jobId: any = '';
+
+  ngOnInit(): void {
+    this.jobId = this.route.snapshot.paramMap.get('id');
+    console.log(this.jobId);
+    if (this.jobId) {
+      this.http.get('https://1337-shrill-disk-50897621.in-ws1.runcode.io/jobs/' + this.jobId).subscribe((response) => {
+          console.log(response);
+          this.jobDetails = response;
+        });
+    }
+  }
 
   handlepostjob() {
-    console.log(
-      this.postjob.job_title,
-      this.postjob.company_name,
-      this.postjob.qualification,
-      this.postjob.experience,
-      this.postjob.location,
-      this.postjob.vacancy,
-      this.postjob.job_description,
-      this.postjob.skills
-    );
-
-    this.http
-      .post(
-        'https://3300-gentle-breeze-14716613.in-ws1.runcode.io/post-job',
-        this.postjob
-      )
-      .subscribe((response) => {
+    console.log(this.jobDetails);
+    if(this.jobId){
+    this.http.patch('https://1337-shrill-disk-50897621.in-ws1.runcode.io/jobs/' +this.jobId, this.jobDetails).subscribe((response) => {
         console.log(response);
       });
+    }
+    else{
+         this.http.post('https://1337-shrill-disk-50897621.in-ws1.runcode.io/jobs',this.jobDetails).subscribe((response) => {
+        console.log(response);
+        })
+      }
   }
-  ngOnInit(): void {}
 }
