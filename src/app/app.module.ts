@@ -13,7 +13,9 @@ import { JobsDetailsComponent } from './jobs-details/jobs-details.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PostJobComponent } from './post-job/post-job.component';
-import { ProfileComponent } from './profile/profile.component'
+import { ProfileComponent } from './profile/profile.component';
+import { TestComponent } from './test/test.component'
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { ProfileComponent } from './profile/profile.component'
     JobsDetailsComponent,
     PostJobComponent,
     ProfileComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,7 @@ import { ProfileComponent } from './profile/profile.component'
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

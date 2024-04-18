@@ -469,24 +469,24 @@
                 <div class="job-items">
                   <div class="company-img">
                     <a href="#"
-                      ><img src={{job.image}} style="width: 120px;"      alt=""
+                      ><img src="{{ job.image }}" style="width: 120px" alt=""
                     /></a>
                   </div>
                   <div class="job-tittle job-tittle2">
-                    <a href="#">
-                      <h4>{{job.title }}</h4>
+                    <a [routerLink]="['/jobs-details', job.id]">
+                      <h4>{{ job.title }}</h4>
                     </a>
                     <ul>
-                      <li>{{job.company}}</li>
+                      <li>{{ job.company }}</li>
                       <li>
-                        <i class="fas fa-map-marker-alt"></i>{{job.position}}
+                        <i class="fas fa-map-marker-alt"></i>{{ job.position }}
                       </li>
-                      <li>{{job.location}}</li>
+                      <li>{{ job.location }}</li>
                     </ul>
                   </div>
                 </div>
                 <div class="items-link items-link2 f-right">
-                  <a href="job_details.html">{{job.type}}</a>
+                  <a href="job_details.html">{{ job.type }}</a>
                   <span>7 hours ago</span>
                 </div>
               </div>
