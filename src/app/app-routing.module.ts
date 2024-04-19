@@ -20,6 +20,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'test/', component: TestComponent },
   { path: 'test/:id', component: TestComponent },
+  { path: 'jobs-list/:id', component: JobsListComponent }
 ];
 
 @NgModule({

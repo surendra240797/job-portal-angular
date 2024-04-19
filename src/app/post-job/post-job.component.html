@@ -19,8 +19,8 @@
                         id="form3Example1c"
                         class="form-control"
                         placeholder="Enter the job title"
-                        name="job title"
-                        [(ngModel)]="jobDetails.title"
+                        name="title"
+                        [(ngModel)]="postjob.title"
                       />
                       <label class="form-label" for="form3Example1c"
                         >Job Title</label
@@ -36,8 +36,8 @@
                         id="form3Example1c"
                         class="form-control"
                         placeholder="Enter the company name"
-                        name="companyname"
-                        [(ngModel)]="jobDetails.company"
+                        name="company"
+                        [(ngModel)]="postjob.company"
                       />
                       <label class="form-label" for="form3Example1c"
                         >Company Name</label
@@ -45,56 +45,56 @@
                     </div>
                   </div>
 
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <input
-                        type="text"
-                        id="form3Example3c"
-                        class="form-control"
-                        placeholder="Enter the job qualification"
-                        name="qualification"
-                        [(ngModel)]="jobDetails.qualification"
-                      />
-                      <label class="form-label" for="form3Example3c"
-                        >Qualification</label
-                      >
-                    </div>
-                  </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input
                         type="text"
-                        id="form3Example3c"
-                        class="form-control"
-                        placeholder="Enter the number of experience in years"
-                        name="experience"
-                        [(ngModel)]="jobDetails.experience"
-                      />
-                      <label class="form-label" for="form3Example3c"
-                        >Experience</label
-                      >
-                    </div>
-                  </div>
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <input
-                        type="text"
-                        id="form3Example3c"
+                        id="form3Example1c"
                         class="form-control"
                         placeholder="Enter the job location"
                         name="location"
-                        [(ngModel)]="jobDetails.location"
+                        [(ngModel)]="postjob.location"
                       />
-                      <label class="form-label" for="form3Example3c"
+                      <label class="form-label" for="form3Example1c"
                         >Location</label
                       >
                     </div>
                   </div>
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input
+                        type="text"
+                        id="form3Example1c"
+                        class="form-control"
+                        placeholder="Enter the job postion"
+                        name="position"
+                        [(ngModel)]="postjob.postion"
+                      />
+                      <label class="form-label" for="form3Example1c"
+                        >Position</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input
+                        type="text"
+                        id="form3Example1c"
+                        class="form-control"
+                        placeholder="Enter the job type"
+                        name="type"
+                        [(ngModel)]="postjob.type"
+                      />
+                      <label class="form-label" for="form3Example1c"
+                        >Type</label
+                      >
+                    </div>
+                  </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
@@ -103,9 +103,94 @@
                         type="text"
                         id="form3Example3c"
                         class="form-control"
-                        placeholder="Enter the number of job vacancies "
+                        placeholder="Enter the job description"
+                        name="description"
+                        [(ngModel)]="postjob.description"
+                      />
+                      <label class="form-label" for="form3Example3c"
+                        >Description</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input
+                        type="text"
+                        id="form3Example3c"
+                        class="form-control"
+                        placeholder="Enter the image url"
+                        name="image"
+                        [(ngModel)]="postjob.image"
+                      />
+                      <label class="form-label" for="form3Example3c"
+                        >Image</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input
+                        type="text"
+                        id="form3Example3c"
+                        class="form-control"
+                        placeholder="Enter the number of required skills "
+                        name="requiredskills"
+                        [(ngModel)]="postjob.requiredskills"
+                      />
+                      <label class="form-label" for="form3Example3c"
+                        >Required Skills</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input
+                        type="text"
+                        id="form3Example3c"
+                        class="form-control"
+                        placeholder="Enter the education details"
+                        name="education"
+                        [(ngModel)]="postjob.education"
+                      />
+                      <label class="form-label" for="form3Example3c"
+                        >Education</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input
+                        type="text"
+                        id="form3Example3c"
+                        class="form-control"
+                        placeholder="Enter the job posted date"
+                        name="posteddate"
+                        [(ngModel)]="postjob.posteddate"
+                      />
+                      <label class="form-label" for="form3Example3c"
+                        >Posted Date</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input
+                        type="text"
+                        id="form3Example3c"
+                        class="form-control"
+                        placeholder="Enter the no of vacancies"
                         name="vacancy"
-                        [(ngModel)]="jobDetails.vacancy"
+                        [(ngModel)]="postjob.vacancy"
                       />
                       <label class="form-label" for="form3Example3c"
                         >Vacancy</label
@@ -113,6 +198,7 @@
                     </div>
                   </div>
 
+                  
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
@@ -120,16 +206,17 @@
                         type="text"
                         id="form3Example3c"
                         class="form-control"
-                        placeholder="Enter the job description details"
-                        name="jobdescription"
-                        [(ngModel)]="jobDetails.job_description"
+                        placeholder="Enter the job salary"
+                        name="salary"
+                        [(ngModel)]="postjob.salary"
                       />
                       <label class="form-label" for="form3Example3c"
-                        >Job Description</label
+                        >Salary</label
                       >
                     </div>
                   </div>
 
+                  
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
@@ -137,16 +224,33 @@
                         type="text"
                         id="form3Example3c"
                         class="form-control"
-                        placeholder="Enter the required job skills"
-                        name="skills"
-                        [(ngModel)]="jobDetails.skills"
+                        placeholder="Enter the job application date"
+                        name="applicationdate"
+                        [(ngModel)]="postjob.applicationdate"
                       />
                       <label class="form-label" for="form3Example3c"
-                        >Skills</label
+                        >Application Date</label
                       >
                     </div>
                   </div>
-
+                                    
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input
+                        type="text"
+                        id="form3Example3c"
+                        class="form-control"
+                        placeholder="Enter the job experience in Years"
+                        name="experience"
+                        [(ngModel)]="postjob.experience"
+                      />
+                      <label class="form-label" for="form3Example3c"
+                        >Experience</label
+                      >
+                    </div>
+                  </div>
+                  
                   <div class="form-check d-flex justify-content-center mb-5">
                     <input
                       class="form-check-input me-2"

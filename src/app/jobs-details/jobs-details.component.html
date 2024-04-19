@@ -55,40 +55,26 @@
                 <h4>Job Description</h4>
               </div>
               <p>
-                This is a full-time on-site role for a Full Stack Developer
-                (Javascript) located in Chennai. The Full Stack Developer will
-                be responsible for the day-to-day tasks associated with Back-End
-                Web Development, Front-End Development and Hybrid Mobile Apps
-                development.
+                {{job.description}}
               </p>
             </div>
             <div class="post-details2 mb-50">
               <!-- Small Section Tittle -->
               <div class="small-section-tittle">
-                <h4>Required Knowledge and Skills</h4>
+                <h4>Required Skills</h4>
               </div>
               <ul>
-                <li>Angular</li>
-                <li>Node.JS</li>
-                <li>MySQL</li>
-                <li>Javascript</li>
-                <li>Front-End Development</li>
-                <li>Back-End Development</li>
-                <li>Full Stack Development</li>
-                <li>Strong problem solving and debugging skills</li>
+                <li>{{job.requiredskills}}</li>
               </ul>
             </div>
             <div class="post-details2 mb-50">
               <!-- Small Section Tittle -->
               <div class="small-section-tittle">
-                <h4>Education + Experience</h4>
+                <h4>Education &  Experience</h4>
               </div>
               <ul>
-                <li>3 or more years of professional design experience</li>
-                <li>Direct response email experience</li>
-                <li>Ecommerce website design experience</li>
-                <li>Familiarity with mobile and web apps preferred</li>
-                <li>Experience using Invision a plus</li>
+                <li>{{job.education}}</li>
+                <li>{{job.experience}}</li>
               </ul>
             </div>
           </div>
@@ -101,12 +87,12 @@
               <h4>Job Overview</h4>
             </div>
             <ul>
-              <li>Posted date : <span>12 Aug 2019</span></li>
-              <li>Location : <span>New York</span></li>
-              <li>Vacancy : <span>02</span></li>
-              <li>Job nature : <span>Full time</span></li>
-              <li>Salary : <span>$7,800 yearly</span></li>
-              <li>Application date : <span>12 Sep 2020</span></li>
+              <li>Posted date : <span>{{job.posteddate}}</span></li>
+              <li>Location : <span>{{job.location}}</span></li>
+              <li>Vacancy : <span>{{job.vacancy}}</span></li>
+              <li>Job type : <span>{{job.type}}</span></li>
+              <li>Salary : <span>{{job.salary}}</span></li>
+              <li>Application date : <span>{{job.applicationdate}}</span></li>
             </ul>
             <div class="apply-btn2">
               <a href="#" class="btn">Apply Now</a>
@@ -117,15 +103,14 @@
             <div class="small-section-tittle">
               <h4>Company Information</h4>
             </div>
-            <span>Colorlib</span>
+            <span>About Company</span>
             <p>
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout.
+              {{job.aboutcompany}}
             </p>
             <ul>
-              <li>Name: <span>Colorlib </span></li>
-              <li>Web : <span> colorlib.com</span></li>
-              <li>Email: <span>carrier.colorlib@gmail.com</span></li>
+              <li>Name: <span>{{job.companyname}} </span></li>
+              <li>Web : <span> {{job.companywebsite}}</span></li>
+              <li>Email: <span>{{job.companyemail}}</span></li>
             </ul>
           </div>
         </div>

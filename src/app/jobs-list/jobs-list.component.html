@@ -307,7 +307,7 @@
                   </div>
                 </div>
               </div>
-              <!-- Count of Job list End -->
+              Count of Job list End
               <!-- single-job-content -->
               <!-- <div class="single-job-items mb-30">
                 <div class="job-items">
@@ -329,8 +329,9 @@
                     </ul>
                   </div>
                 </div>
-                <div class="items-link items-link2 f-right">
-                  <a routerLink="/jobs-details">Full Time</a>
+               <div class="items-link items-link2 f-right">
+                  <a >Full Time</a>
+                  <a >Edit </a>
                   <span>7 hours ago</span>
                 </div>
               </div> -->
@@ -486,8 +487,11 @@
                   </div>
                 </div>
                 <div class="items-link items-link2 f-right">
-                  <a href="job_details.html">{{ job.type }}</a>
+                  <a>{{ job.type }}</a>
                   <span>7 hours ago</span>
+                </div>
+                <div class="items-link items-link2 f-right">
+                  <a [routerLink]="['/edit-job',job.id]">Edit</a>
                 </div>
               </div>
             </div>

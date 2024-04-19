@@ -19,7 +19,7 @@ export class JobsDetailsComponent implements OnInit {
 
     this.http
       .get(
-        'https://1337-shrill-disk-50897621.in-ws1.runcode.io/jobs/' + this.id
+        'https://1337-shrill-disk-50897621.in-ws2.runcode.io/jobs/' + this.id
       )
       .subscribe((response) => {
         console.log(response);
