@@ -21,7 +21,7 @@ export class PostJobComponent implements OnInit {
 
     if (this.jobId) {
       
-      this.http.get('https://1337-shrill-disk-50897621.in-ws2.runcode.io/jobs/' + this.jobId).subscribe((response) => {
+      this.http.get('https://4200-rough-feather-57396615.in-ws1.runcode.io/jobs/' + this.jobId).subscribe((response) => {
           console.log(response);
       this.postjob = response;
                   
@@ -34,14 +34,14 @@ export class PostJobComponent implements OnInit {
     console.log(this.postjob);
     
     if(this.jobId){
-    this.http.patch('https://1337-shrill-disk-50897621.in-ws2.runcode.io/jobs/' +this.jobId, this.postjob).subscribe((response) => {
+    this.http.patch('https://4200-rough-feather-57396615.in-ws1.runcode.io/jobs/' +this.jobId, this.postjob).subscribe((response) => {
         console.log(response);
         alert('Updated Successfully');
         this.router.navigate(['/jobs-list']);
       });
     }
     else{
-         this.http.post('https://1337-shrill-disk-50897621.in-ws2.runcode.io/jobs',this.postjob).subscribe((response) => {
+         this.http.post('https://4200-rough-feather-57396615.in-ws1.runcode.io/jobs',this.postjob).subscribe((response) => {
         console.log(response);
         alert('Posted Job Successfully');
         this.router.navigate(['/jobs-list']);

@@ -8,23 +8,40 @@ import { JobsDetailsComponent } from './jobs-details/jobs-details.component';
 import { PostJobComponent } from './post-job/post-job.component';
 import { ProfileComponent } from './profile/profile.component';
 import { TestComponent } from './test/test.component';
+import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   { path: '', component: ContentComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'jobs-list', component: JobsListComponent },
-  { path: 'jobs-details/:id', component: JobsDetailsComponent },
-  { path: 'jobs-details', component: JobsDetailsComponent },
-  { path: 'post-job', component: PostJobComponent },
-  { path: 'edit-job/:id', component: PostJobComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'jobs-list', component: JobsListComponent, canActivate: [AuthGuard] },
+  {
+    path: 'jobs-details/:id',
+    component: JobsDetailsComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'jobs-details',
+    component: JobsDetailsComponent,
+    canActivate: [AuthGuard]
+  },
+  { path: 'post-job', component: PostJobComponent, canActivate: [AuthGuard] },
+  {
+    path: 'edit-job/:id',
+    component: PostJobComponent,
+    canActivate: [AuthGuard]
+  },
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'test/', component: TestComponent },
   { path: 'test/:id', component: TestComponent },
-  { path: 'jobs-list/:id', component: JobsListComponent }
+  {
+    path: 'jobs-list/:id',
+    component: JobsListComponent,
+    canActivate: [AuthGuard]
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

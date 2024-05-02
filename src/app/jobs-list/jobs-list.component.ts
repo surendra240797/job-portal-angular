@@ -13,7 +13,7 @@ export class JobsListComponent implements OnInit {
 
   ngOnInit(): void {
     this.http
-      .get('https://1337-shrill-disk-50897621.in-ws2.runcode.io/jobs')
+      .get('https://1337-shrill-disk-50897621.in-ws1.runcode.io/jobs')
       .subscribe((response) => {
         console.log(response);
         this.jobslist = response;
