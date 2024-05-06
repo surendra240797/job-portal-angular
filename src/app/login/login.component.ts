@@ -8,37 +8,25 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
+
 export class LoginComponent implements OnInit {
-  //  email:string = ''
-  //  password:string= ''
-  userLogin: any = {};
+  userService: any = {};
+  userLogin: any;
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   handleLogin() {
-    console.log(
-      'Email:' + this.userLogin.email,
-      'Password:' + this.userLogin.password
-    );
-
-    this.http
-      .post(
-        'https://1337-shrill-disk-50897621.in-ws1.runcode.io/users/login',
-        this.userLogin
-      )
-      .subscribe((response: any) => {
-        console.log(response);
-        if (response.status) {
-          alert('Login Successfully');
-          this.router.navigate(['/profile']);
-          localStorage.setItem('user', JSON.stringify(response.data));
-        } else {
-          alert('Email/Password incorrect');
-          //   this.ngOnInit()
-        }
-      });
+    this.userService.login(this.userLogin).subscribe((Response: any) => {
+      if (Response.status) {
+        this.router.navigate(['/profile']);
+        localStorage.setItem('user', JSON.stringify(Response.data));
+      }
+      else {
+        alert('email / password doesnot match');
+      }
+    });
 
     console.log('End of handleLogin()');
   }
